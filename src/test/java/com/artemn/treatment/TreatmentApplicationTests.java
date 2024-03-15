@@ -34,14 +34,14 @@ class TreatmentApplicationTests {
         assertThat(actual).hasSize(2);
 
         final TreatmentPlan johnPlan = actual.get(0);
-        assertThat(johnPlan.getId()).isEqualTo(1);
+        assertThat(johnPlan.getId()).isEqualTo(1L);
         assertThat(johnPlan.getPatient()).isEqualTo("John Doe");
         assertThat(johnPlan.getAction()).isEqualTo(ActionA);
         assertThat(johnPlan.getStartTime()).isEqualTo(LocalDateTime.parse("2024-01-01T09:00"));
         assertThat(johnPlan.getRecurrencePattern()).isEqualTo("every day at 08:00 and 16:00");
 
         final TreatmentPlan janePlan = actual.get(1);
-        assertThat(janePlan.getId()).isEqualTo(2);
+        assertThat(janePlan.getId()).isEqualTo(2L);
         assertThat(janePlan.getPatient()).isEqualTo("Jane Smith");
         assertThat(janePlan.getAction()).isEqualTo(ActionB);
         assertThat(janePlan.getStartTime()).isEqualTo(LocalDateTime.parse("2024-01-02T11:00"));
