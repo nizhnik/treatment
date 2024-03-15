@@ -9,3 +9,5 @@ CREATE TABLE treatment_plan (
 );
 
 CREATE SEQUENCE TREATMENT_PLAN_SEQ INCREMENT BY 50;
+CREATE INDEX idx_end_scheduled ON treatment_plan(end_time, scheduled_until)
+
